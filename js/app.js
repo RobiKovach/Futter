@@ -3790,26 +3790,16 @@
     }
     const da = new DynamicAdapt("max");
     da.init();
-    const sectionTwo = document.querySelector(".section-two");
-    const sectionTwoImg = document.querySelector(".section-two__image");
-    const sectionBanner = document.querySelector(".banner");
-    const sectionBannerImg = document.querySelector(".banner__img");
-    const sectionRocket = document.querySelector(".section-three");
-    const sectionFour = document.querySelector(".section-four");
-    const sectionSeven = document.querySelector(".section-seven");
-    const sectionRocketrImg = document.querySelector(".rest-three__image");
-    const sectionFourImg = document.querySelector(".section-four__image");
-    const sectionSevenImg = document.querySelector(".price-seven");
-    function animToPlay(params) {
-        if (sectionBanner.classList.contains("_watcher-view")) sectionBannerImg.classList.add("animate__backInRight"); else sectionBannerImg.classList.remove("animate__backInRight");
-        if (sectionTwo.classList.contains("_watcher-view")) sectionTwoImg.classList.add("animate__backInLeft"); else sectionTwoImg.classList.remove("animate__backInLeft");
-        if (sectionRocket.classList.contains("_watcher-view")) sectionRocketrImg.classList.add("animate__rotateInUpRight"); else sectionRocketrImg.classList.remove("animate__rotateInUpRight");
-        if (sectionFour.classList.contains("_watcher-view")) sectionFourImg.classList.add("animate__rollIn"); else sectionFourImg.classList.remove("animate__rollIn");
-        if (sectionSeven.classList.contains("_watcher-view")) sectionSevenImg.classList.add("animate__zoomInRight"); else sectionSevenImg.classList.remove("animate__zoomInRight");
-    }
-    setInterval((() => {
-        animToPlay();
-    }), "100");
+    document.querySelector(".section-two");
+    document.querySelector(".section-two__image");
+    document.querySelector(".banner");
+    document.querySelector(".banner__img");
+    document.querySelector(".section-three");
+    document.querySelector(".section-four");
+    document.querySelector(".section-seven");
+    document.querySelector(".rest-three__image");
+    document.querySelector(".section-four__image");
+    document.querySelector(".price-seven");
     window["FLS"] = true;
     isWebp();
     menuInit();
