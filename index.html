@@ -6,7 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230904182426">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230904185100">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20230904185100" rel="stylesheet">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -45,15 +46,16 @@
 			<section data-watch-threshold="0.5" data-watch="navigator" class="banner">
 				<div class="banner__container">
 					<div class="banner__info">
-						<p class="banner__subtitle subtitle">СТАРТ 2 ЖОВТНЯ 2023 * 30 занять</p>
-						<h1 class="banner__title title">Курс “Flutter з нуля”</h1>
-						<p class="banner__description description">Розпочни свою карʼєру в розробці <br>
+						<p data-aos="fade-up" class="banner__subtitle subtitle">СТАРТ 2 ЖОВТНЯ 2023 * 30 занять</p>
+						<h1 data-aos="fade-up" class="banner__title title">Курс “Flutter з нуля”</h1>
+						<p data-aos="fade-up" class="banner__description description">Розпочни свою карʼєру в розробці <br>
 							мобільних додатків зараз</p>
-						<div class="banner__informacion">Кількість місць обмежена!</div>
-						<a href="#" data-goto=".footer" class="banner__btn activ-btn">ЗАПИСАТИСЯ НА КУРС</a>
+						<div data-aos="fade-up" class="banner__informacion">Кількість місць обмежена!</div>
+						<a data-aos="fade-up" href="#" data-goto=".footer" class="banner__btn activ-btn">ЗАПИСАТИСЯ НА
+							КУРС</a>
 					</div>
-					<div class="banner__image">
-						<img src="img/Logo.svg" alt="" class="banner__img animate__animated">
+					<div data-aos="zoom-out-down" class="banner__image">
+						<img src="img/Logo.svg" alt="" class="banner__img">
 					</div>
 				</div>
 			</section>
@@ -62,8 +64,8 @@
 					<img src="img/coursbg.svg" alt="">
 				</span>
 				<div class="section-two__container">
-					<div class="section-two__image animate__animated ">
-						<img src="img/woman.png" alt="" class="section-two__img">
+					<div class=" section-two__image">
+						<img data-aos="flip-left" src="img/woman.png" alt="" class="section-two__img">
 					</div>
 					<div class="section-two__info info-two">
 						<h2 class="info-two__title title">Про курс</h2>
@@ -129,7 +131,7 @@
 								<p class="item-rest__description">Очікувана стартова заробітна плата від</p>
 								<p class="item-rest__price">500$</p>
 							</div>
-							<div class="rest-three__image animate__animated">
+							<div data-aos="flip-right" class="rest-three__image">
 								<img src="img/Entrepreneurship.png" alt="" class="rest-three__img">
 							</div>
 						</div>
@@ -141,7 +143,7 @@
 					<img src="img/learnbg.svg" alt="">
 				</span>
 				<div class="section-four__container">
-					<div data-goto=".section-four" class="section-four__image animate__animated ">
+					<div data-aos="zoom-in-right" data-goto=".section-four" class="section-four__image">
 						<img src="img/man.png" alt="" class="section-four__img">
 					</div>
 					<div class="section-four__info">
@@ -254,7 +256,7 @@
 							<div class="section-seven__slide swiper-slide seven-slide__four"></div>
 						</div>
 					</div>
-					<div class="section-seven__price price-seven animate__animated">
+					<div data-aos="flip-left" class="section-seven__price price-seven">
 						<img src="img/price.png" alt="" class="price-seven__img">
 						<div class="price-seven__info">
 							<p class="price-seven__description">Вартість</p>
@@ -285,7 +287,11 @@
 			</span>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230904182426"></script>
+	<script src="js/app.min.js?_v=20230904185100"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20230904185100"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 
 </html>
