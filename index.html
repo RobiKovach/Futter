@@ -1,46 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<title>HomePage</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230902172709">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
 
 <body>
 	<div class="wrapper">
 		<span class="top-circl"></span>
-		<header data-scroll="104" data-scroll-show class="header">
-			<div class="header__container">
-				<div class="header__menu menu">
-					<button type="button" class="menu__icon icon-menu"><span></span></button>
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li class="menu__item"><a href="#" data-goto=".banner" id="home" class="menu__link">Головна</a></li>
-							<li class="menu__item"><a href="#" data-goto=".section-two" id="about" class="menu__link">Про курс</a></li>
-							<li class="menu__item"><a href="#" data-goto=".section-four" id="proces" class="menu__link">Процес навчання</a></li>
-							<li class="menu__item"><a href="#" data-goto=".section-five" id="lector" class="menu__link">Про лектора</a></li>
-							<li class="menu__item"><a href="#" data-goto=".section-six" id="comments" class="menu__link">Відгуки</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="header__actions header-actions">
-					<a href="tel:+380 99 429 00 07" class="header-actions__phone">
-						<span>
-							<img src="img/phone.svg" alt="phone">
-						</span>
-						<p>+380 99 429 00 07</p>
-					</a>
-					<a href="#" data-goto=".footer" class="header-actions__btn action-btn">
-						ЗАРЕЄСТРУВАТИСЯ
-					</a>
-				</div>
-			</div>
-		</header>
+		@@include('html/_header.htm',{})
 		<main class="page">
 			<section data-watch-threshold="0.5" data-watch="navigator" class="banner">
 				<div class="banner__container">
@@ -53,17 +20,17 @@
 						<a href="#" data-goto=".footer" class="banner__btn activ-btn">ЗАПИСАТИСЯ НА КУРС</a>
 					</div>
 					<div class="banner__image">
-						<img src="img/Logo.svg" alt="" class="banner__img animate__animated">
+						<img src="@img/Logo.svg" alt="" class="banner__img animate__animated">
 					</div>
 				</div>
 			</section>
 			<section data-watch-threshold="0.5" data-watch="navigator" class="section-two">
 				<span class="section-two__bg">
-					<img src="img/coursbg.svg" alt="">
+					<img src="@img/coursbg.svg" alt="">
 				</span>
 				<div class="section-two__container">
 					<div class="section-two__image animate__animated ">
-						<img src="img/woman.png" alt="" class="section-two__img">
+						<img src="@img/woman.png" alt="" class="section-two__img">
 					</div>
 					<div class="section-two__info info-two">
 						<h2 class="info-two__title title">Про курс</h2>
@@ -88,28 +55,28 @@
 					<div class="section-three__info info-three">
 						<div class="info-three__items">
 							<div data-da=".slider-three__1, 768" class="info-three__item item-three">
-								<img src="img/flutter.svg" alt="" class="item-three__img">
+								<img src="@img/flutter.svg" alt="" class="item-three__img">
 								<h6 class="item-three__title">Вивчення основ та Flutter</h6>
 								<p class="item-thre__description">Завершивши курс, ви отримаєте потужне розуміння основ
 									програмування та зможете створювати кросплатформенні додатки з
 									використанням зовнішніх пакетів та інструментів.</p>
 							</div>
 							<div data-da=".slider-three__2, 768" class="info-three__item item-three">
-								<img src="img/mdi_firebase.svg" alt="" class="item-three__img">
+								<img src="@img/mdi_firebase.svg" alt="" class="item-three__img">
 								<h6 class="item-three__title">Знайомство Firebase</h6>
 								<p class="item-thre__description">Під час курсу детально дізнаєтеся про різноманітні продукти
 									Firebase та як їх використовувати для покращення якості
 									вашого програмного продукту.</p>
 							</div>
 							<div data-da=".slider-three__3, 768" class="info-three__item item-three">
-								<img src="img/mdi_git.svg" alt="" class="item-three__img">
+								<img src="@img/mdi_git.svg" alt="" class="item-three__img">
 								<h6 class="item-three__title">Розуміння Git</h6>
 								<p class="item-thre__description">Зрозумієте Git, ключовий інструмент для розробників.
 									Дізнаєтеся, як ефективно працювати з проектами, гілками та
 									об'єднаннями.</p>
 							</div>
 							<div data-da=".slider-three__4, 768" class="info-three__item item-three">
-								<img src="img/zondicons_portfolio.svg" alt="" class="item-three__img">
+								<img src="@img/zondicons_portfolio.svg" alt="" class="item-three__img">
 								<h6 class="item-three__title">Ваше портфоліо досягнень</h6>
 								<p class="item-thre__description">Створите функціональні додатки, які відобразять ваші навички у
 									вигляді вражаючого портфоліо, готового вас представити у
@@ -130,7 +97,7 @@
 								<p class="item-rest__price">500$</p>
 							</div>
 							<div class="rest-three__image animate__animated">
-								<img src="img/Entrepreneurship.png" alt="" class="rest-three__img">
+								<img src="@img/Entrepreneurship.png" alt="" class="rest-three__img">
 							</div>
 						</div>
 					</div>
@@ -138,11 +105,11 @@
 			</section>
 			<section data-watch-threshold="0.5" data-watch="navigator" class="section-four">
 				<span class="section-four__bg">
-					<img src="img/learnbg.svg" alt="">
+					<img src="@img/learnbg.svg" alt="">
 				</span>
 				<div class="section-four__container">
 					<div data-goto=".section-four" class="section-four__image animate__animated ">
-						<img src="img/man.png" alt="" class="section-four__img">
+						<img src="@img/man.png" alt="" class="section-four__img">
 					</div>
 					<div class="section-four__info">
 						<h2 class="section-four__title title">Як буде проходити навчання?</h2>
@@ -184,7 +151,7 @@
 								<p class="text-five__description">Приєднуйтеся – разом ми доведемо, що зміна сфери діяльності –
 									це крок до кращого.</p>
 							</div>
-						</div><img src="img/lectorbg.png" alt="" class="images-five__tablet">
+						</div><img src="@img/lectorbg.png" alt="" class="images-five__tablet">
 					</div>
 				</div>
 			</section>
@@ -194,28 +161,28 @@
 					<div class="section-six__slider swiper">
 						<div class="section-six__wrapper swiper-wrapper">
 							<div class="section-six__slide swiper-slide swiper-six">
-								<img src="img/vidhuk.png" alt="" class="swiper-six__img">
+								<img src="@img/vidhuk.png" alt="" class="swiper-six__img">
 								<h5 class="swiper-six__title">Імя Прізвище</h5>
 								<p class="swiper-six__description">Завершивши курс, ви отримаєте потужне розуміння основ
 									програмування та зможете створювати кросплатформенні додатки з
 									використанням зовнішніх пакетів та інструментів.</p>
 							</div>
 							<div class="section-six__slide swiper-slide swiper-six">
-								<img src="img/vidhuk.png" alt="" class="swiper-six__img">
+								<img src="@img/vidhuk.png" alt="" class="swiper-six__img">
 								<h5 class="swiper-six__title">Імя Прізвище</h5>
 								<p class="swiper-six__description">Завершивши курс, ви отримаєте потужне розуміння основ
 									програмування та зможете створювати кросплатформенні додатки з
 									використанням зовнішніх пакетів та інструментів.</p>
 							</div>
 							<div class="section-six__slide swiper-slide swiper-six">
-								<img src="img/vidhuk.png" alt="" class="swiper-six__img">
+								<img src="@img/vidhuk.png" alt="" class="swiper-six__img">
 								<h5 class="swiper-six__title">Імя Прізвище</h5>
 								<p class="swiper-six__description">Завершивши курс, ви отримаєте потужне розуміння основ
 									програмування та зможете створювати кросплатформенні додатки з
 									використанням зовнішніх пакетів та інструментів.</p>
 							</div>
 							<div class="section-six__slide swiper-slide swiper-six">
-								<img src="img/vidhuk.png" alt="" class="swiper-six__img">
+								<img src="@img/vidhuk.png" alt="" class="swiper-six__img">
 								<h5 class="swiper-six__title">Імя Прізвище</h5>
 								<p class="swiper-six__description">Завершивши курс, ви отримаєте потужне розуміння основ
 									програмування та зможете створювати кросплатформенні додатки з
@@ -255,7 +222,7 @@
 						</div>
 					</div>
 					<div class="section-seven__price price-seven animate__animated">
-						<img src="img/price.png" alt="" class="price-seven__img">
+						<img src="@img/price.png" alt="" class="price-seven__img">
 						<div class="price-seven__info">
 							<p class="price-seven__description">Вартість</p>
 							<p class="price-seven__price">15 000грн</p>
@@ -264,28 +231,9 @@
 				</div>
 			</section>
 		</main>
-		<footer class="footer">
-			<div class="footer__container">
-				<img src="img/calendar.svg" alt="" class="calendar">
-				<form class="footer-form" data-ajax action="files/sendmail/sendmail.php" method="POST">
-					<h2 class="footer-form__title title">Зворотня форма</h2>
-					<div class="footer-form__form">
-						<label for="fip">Ім’я та прізвище</label>
-						<input type="text" id="fip" name="form[email]" data-required placeholder="Напишіть своє імʼя та прізвище" class="input">
-						<label for="post">Email</label>
-						<input type="text" id="post" name="form[email]" data-required="email" data-error="Не правильно введений емейл" placeholder="Напишіть свою пошту" class="input">
-						<label for="tel">Номер телефону</label>
-						<input type="number" id="tel" name="form[email]" data-required data-error="Error" placeholder="Напишіть свій номер телефону" class="input">
-						<button type="submit" class="button action-btn">НАДІСЛАТИ</button>
-					</div>
-				</form>
-			</div>
-			<span class="footer__bg">
-				<img src="img/footerbg.svg" alt="">
-			</span>
-		</footer>
+		@@include('html/_footer.htm',{})
 	</div>
-	<script src="js/app.min.js?_v=20230902172709"></script>
+	@@include('html/_js.htm',{})
 </body>
 
 </html>
