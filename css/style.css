@@ -4493,6 +4493,101 @@ textarea.input {
   padding: 0px 0px;
 }
 
+body::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease 0s;
+  transition: opacity 0.8s ease 0s;
+  pointer-events: none;
+  z-index: 149;
+}
+
+.popup-show body::after {
+  opacity: 1;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 30px 10px;
+  -webkit-transition: visibility 0.8s ease 0s;
+  transition: visibility 0.8s ease 0s;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.popup_show {
+  z-index: 150;
+  visibility: visible;
+  overflow: auto;
+  pointer-events: auto;
+}
+
+.popup_show .popup__content {
+  visibility: visible;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.popup__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+}
+
+.popup__content {
+  visibility: hidden;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  background-color: #eee;
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.lock .popup__content {
+  visibility: visible;
+}
+
+.popup__close {
+  position: absolute;
+  right: 20px;
+}
+
 [class*=-ibg] {
   position: relative;
 }
@@ -5250,11 +5345,32 @@ label {
   cursor: pointer;
 }
 
+.swiper-six__img {
+  width: 100%;
+}
+
+.swiper-six__image {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 500px;
+}
+
 .swiper-six__title {
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-align: center;
 }
 
 .swiper-six__description {
@@ -5409,6 +5525,41 @@ label {
   line-height: normal;
 }
 
+.popup__text {
+  padding: 4rem 3.5rem 2rem 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 15px;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.popup-text__title {
+  color: #333333;
+  font-family: Raleway;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+.popup-text__subtitle {
+  color: #333333;
+}
+
+.popup-text__description {
+  color: #828282;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -5455,6 +5606,20 @@ label {
 
 .swiper-button-lock {
   display: none !important;
+}
+
+@media (min-width: 20em) {
+  .popup__text {
+    padding-right: 3.5rem;
+  }
+
+  .popup__text {
+    padding-left: 3.5rem;
+  }
+
+  .popup__text {
+    padding-top: 4rem;
+  }
 }
 
 @media (max-width: 90em) {
@@ -5577,8 +5742,15 @@ label {
             transform: rotate(45deg);
   }
 
-  .banner__image {
-    display: none;
+  .banner__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .banner__img {
+    width: 50%;
   }
 
   .section-two__image {
@@ -5643,11 +5815,29 @@ label {
   .price-seven__info {
     width: 100%;
   }
+
+  .popup__text {
+    padding: 1.875rem 1.25rem 2rem 1.25rem;
+  }
 }
 
 @media (max-width: 48em) and (any-hover: none) {
   .icon-menu {
     cursor: default;
+  }
+}
+
+@media (max-width: 20em) {
+  .popup__text {
+    padding-right: 1.25rem;
+  }
+
+  .popup__text {
+    padding-left: 1.25rem;
+  }
+
+  .popup__text {
+    padding-top: 1.875rem;
   }
 }
 
@@ -6738,6 +6928,44 @@ label {
 @supports not (font-size: clamp( 2.5rem , 0.6739130435rem  +  9.1304347826vw , 3.8125rem )) {
     .price-seven__price {
       font-size: calc(2.5rem + 1.3125 * (100vw - 20rem) / 14.375);
+    }
+}
+}
+
+@media (min-width: 20em) and (max-width: 20em) {
+@supports (padding-right: clamp( 1.25rem , calc(-infinity)rem  +  calc(infinity)vw , 3.5rem )) {
+    .popup__text {
+      padding-right: clamp( 1.25rem , calc(-infinity)rem  +  calc(infinity)vw , 3.5rem );
+    }
+}
+
+@supports not (padding-right: clamp( 1.25rem , calc(-infinity)rem  +  calc(infinity)vw , 3.5rem )) {
+    .popup__text {
+      padding-right: calc(1.25rem + 2.25 * (100vw - 20rem) / 0);
+    }
+}
+
+@supports (padding-left: clamp( 1.25rem , calc(-infinity)rem  +  calc(infinity)vw , 3.5rem )) {
+    .popup__text {
+      padding-left: clamp( 1.25rem , calc(-infinity)rem  +  calc(infinity)vw , 3.5rem );
+    }
+}
+
+@supports not (padding-left: clamp( 1.25rem , calc(-infinity)rem  +  calc(infinity)vw , 3.5rem )) {
+    .popup__text {
+      padding-left: calc(1.25rem + 2.25 * (100vw - 20rem) / 0);
+    }
+}
+
+@supports (padding-top: clamp( 1.875rem , calc(-infinity)rem  +  calc(infinity)vw , 4rem )) {
+    .popup__text {
+      padding-top: clamp( 1.875rem , calc(-infinity)rem  +  calc(infinity)vw , 4rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.875rem , calc(-infinity)rem  +  calc(infinity)vw , 4rem )) {
+    .popup__text {
+      padding-top: calc(1.875rem + 2.125 * (100vw - 20rem) / 0);
     }
 }
 }
